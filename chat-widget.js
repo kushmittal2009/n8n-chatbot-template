@@ -24,6 +24,9 @@
             border: 1px solid rgba(133, 79, 255, 0.2);
             overflow: hidden;
             font-family: inherit;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
             /* 🔹 Responsive Fix for Mobile */
         @media (max-width: 480px) {
@@ -52,6 +55,8 @@
         .n8n-chat-widget .chat-container.open {
             display: flex;
             flex-direction: column;
+            transform: scale(1);
+            opacity: 1;
         }
 
         .n8n-chat-widget .brand-header {
@@ -507,15 +512,21 @@
         }
     });
     
-    toggleButton.addEventListener('click', () => {
-        chatContainer.classList.toggle('open');
+toggleButton.addEventListener('click', () => {
+    chatContainer.style.display = 'flex'; // ensure display flex before animation
+    requestAnimationFrame(() => {
+        chatContainer.classList.add('open');
     });
+});
 
-    // Add close button handlers
-    const closeButtons = chatContainer.querySelectorAll('.close-button');
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            chatContainer.classList.remove('open');
-        });
+// Close button animation
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        chatContainer.classList.remove('open');
+        // wait for animation to finish before hiding completely
+        setTimeout(() => {
+            chatContainer.style.display = 'none';
+        }, 300); // match the CSS transition duration
     });
+});
 })();
