@@ -1,5 +1,7 @@
 // Chat Widget Script
-(function() {
+(function(initContainer) {
+    const root = initContainer || document.body;
+
     // Create and inject styles
     const styles = `
         .n8n-chat-widget {
@@ -413,7 +415,7 @@
     
     widgetContainer.appendChild(chatContainer);
     widgetContainer.appendChild(toggleButton);
-    document.body.appendChild(widgetContainer);
+    root.appendChild(widgetContainer);
 
     const newChatBtn = chatContainer.querySelector('.new-chat-btn');
     const chatInterface = chatContainer.querySelector('.chat-interface');
@@ -531,4 +533,4 @@ closeButtons.forEach(button => {
     });
 });
 
-})();
+})(window.ChatWidgetContainer);
