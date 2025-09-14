@@ -34,8 +34,8 @@
                 right: 0 !important;
                 left: 0 !important;
                 bottom: 0 !important;
-                padding-left: 5px !important;
-                padding-right: 5px !important;
+                margin-left: 5px !important;
+                margin-right: 5px !important;
                 border-radius: 10px 10px 0 0 !important;
             }
 
