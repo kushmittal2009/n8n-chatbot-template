@@ -28,14 +28,14 @@
             /* 🔹 Responsive Fix for Mobile */
         @media (max-width: 480px) {
             .n8n-chat-widget .chat-container {
-                width: 100% !important;
-                max-width: 100% !important;
-                height: 90vh !important;
+                width: 94% !important;
+                max-width: 97% !important;
+                height: 95% !important;
                 right: 0 !important;
                 left: 0 !important;
                 bottom: 0 !important;
-                margin-left: 5px !important;
-                margin-right: 5px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
                 border-radius: 10px 10px 0 0 !important;
             }
 
