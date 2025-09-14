@@ -524,6 +524,7 @@ toggleButton.addEventListener('click', () => {
 });
 
 // Close button animation
+    const closeButtons = chatContainer.querySelectorAll('.close-button');
 closeButtons.forEach(button => {
     button.addEventListener('click', () => {
         chatContainer.classList.remove('open');
