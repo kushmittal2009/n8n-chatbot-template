@@ -25,7 +25,23 @@
             overflow: hidden;
             font-family: inherit;
         }
+            /* 🔹 Responsive Fix for Mobile */
+        @media (max-width: 480px) {
+            .n8n-chat-widget .chat-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: 70vh !important;
+                right: 0 !important;
+                left: 0 !important;
+                bottom: 0 !important;
+                border-radius: 10px 10px 0 0 !important;
+            }
 
+            .n8n-chat-widget .chat-toggle {
+                right: 15px !important;
+                bottom: 15px !important;
+            }
+        }
         .n8n-chat-widget .chat-container.position-left {
             right: auto;
             left: 20px;
