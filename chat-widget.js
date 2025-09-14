@@ -30,10 +30,12 @@
             .n8n-chat-widget .chat-container {
                 width: 100% !important;
                 max-width: 100% !important;
-                height: 70vh !important;
+                height: 90vh !important;
                 right: 0 !important;
                 left: 0 !important;
                 bottom: 0 !important;
+                padding-left: 5px !important;
+                padding-right: 5px !important;
                 border-radius: 10px 10px 0 0 !important;
             }
 
