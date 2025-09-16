@@ -181,6 +181,7 @@
             background: var(--chat--color-background);
             display: flex;
             flex-direction: column;
+            overscroll-behavior: contain;
         }
 
         .n8n-chat-widget .chat-message {
@@ -328,8 +329,8 @@
             welcomeText: '',
             responseTimeText: '',
             poweredBy: {
-                text: 'Powered by n8n',
-                link: 'https://n8n.partnerlinks.io/m8a94i19zhqq?utm_source=nocodecreative.io'
+                text: 'Powered by Aiera Digital',
+                link: 'https://aieradigitial.com'
             }
         },
         style: {
