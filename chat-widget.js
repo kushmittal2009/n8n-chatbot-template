@@ -182,6 +182,7 @@
             display: flex;
             flex-direction: column;
             overscroll-behavior: contain;
+            white-space: pre-wrap;
         }
 
         .n8n-chat-widget .chat-message {
